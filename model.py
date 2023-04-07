@@ -254,3 +254,31 @@ def f1(train_dataloader, val_dataloader):
     plt.ylabel('$loss$')
     plt.legend(loc = 'upper right')
     plt.show();
+
+def f2(train_dataloader, val_dataloader):
+    model2 = Transformer(num_tokens=4, dim_model=8, num_heads=2, num_encoder_layers=2, num_decoder_layers=2, dropout_p=0.1).to("cpu")
+    opt = torch.optim.SGD(model2.parameters(), lr=0.01)
+    loss_fn = nn.CrossEntropyLoss()
+    train_loss2, validation_loss2 = fit(model2, opt, loss_fn, train_dataloader, val_dataloader, 10)
+    x_points = np.arange(1,11)
+    plt.title('model1 train and valdation loss')
+    plt.plot(x_points, train_loss2, 'b--', label = 'tain set')
+    plt.plot(x_points, validation_loss2, 'g--', label = 'validation set')
+    plt.xlabel('$epoches$')
+    plt.ylabel('$loss$')
+    plt.legend(loc = 'upper right')
+    plt.show();
+
+def f3(train_dataloader, val_dataloader):
+    model3 = Transformer(num_tokens=4, dim_model=8, num_heads=2, num_encoder_layers=2, num_decoder_layers=4, dropout_p=0.1).to(device)
+    opt = torch.optim.SGD(model3.parameters(), lr=0.1)
+    loss_fn = nn.CrossEntropyLoss()
+    train_loss3, validation_loss3 = fit(model3, opt, loss_fn, train_dataloader, val_dataloader, 10)
+    x_points = np.arange(1,11)
+    plt.title('model 3 train and valdation loss')
+    plt.plot(x_points, train_loss3, 'b--', label = 'tain set')
+    plt.plot(x_points, validation_loss3, 'g--', label = 'validation set')
+    plt.xlabel('$epoches$')
+    plt.ylabel('$loss$')
+    plt.legend(loc = 'upper right')
+    plt.show();
