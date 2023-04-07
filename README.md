@@ -5,7 +5,7 @@ the goal of this program is to build transformer model and train it with sequenc
 the dataset, sequences of amino acids, has been collected manually from https://www.uniprot.org website in fasta format and appended to pandas.DataFrame object with its corresponding gene and protein name , for now it only contains 4 major protein in human body. 
 limitations: it has few sequences of amino acids
 
-# usage
+# the program
 1. clone the repository
 2. run ./env.sh # creates virtual environemt and install required packages for ubuntu 20.04
 3. run ./main.py
