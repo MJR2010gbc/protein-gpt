@@ -8,4 +8,5 @@ limitations: it has few sequences of amino acids
 # the program
 1. clone the repository # git clone https://github.com/ShayanHodai/protein-gpt.git
 2. run ./env.sh # creates virtual environemt and install required packages for ubuntu 20.04
+3. activate the virtual environment: source [the directory you cloned the repo]/venv/protein/bin/activate
 3. run ./main.py
