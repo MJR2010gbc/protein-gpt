@@ -16,3 +16,7 @@ Proteins are made by long length of amino acids and each amino acid is made of 3
 
 the goal of this program is to build GPT, generative pre-trained transformer, model and train it on sequences of amino acids in human body and produce new proteins given a sequence of amino acid initially. 
 the dataset, sequences of amino acids, has been collected manually from https://www.uniprot.org website in fasta format and appended to pandas.DataFrame object with its corresponding gene and protein name , for now it only contains 4 major protein in human body. 
+# the program
+1. clone the repository
+2. run ./env.sh # creates virtual environemt and install required packages for ubuntu 20.04
+3. run ./main.py
