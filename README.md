@@ -6,6 +6,6 @@ the dataset, sequences of amino acids, has been collected manually from https://
 limitations: it has few sequences of amino acids
 
 # the program
-1. clone the repository
+1. clone the repository # git clone https://github.com/ShayanHodai/protein-gpt.git
 2. run ./env.sh # creates virtual environemt and install required packages for ubuntu 20.04
 3. run ./main.py
